@@ -23,4 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('smartclock/', include('smartclock.urls'), name="smartclock"),
     path('about/', views.about, name="about"),
+    #path('', include('accounts.urls')),  #追加
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

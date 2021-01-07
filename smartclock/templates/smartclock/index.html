@@ -31,7 +31,6 @@
           <span class="todaysweather"></span><span class="todaysweather"></span><span class="todaysweather"></span>
         </div>
         <div class="login-container">
-          <a href="#" class="login-button">ログイン</a>
         </div>
       </div>
     </div>
@@ -84,45 +83,9 @@
           <span><select></select></span>
         </p>
       </div>
-      <!-- <input type="submit" value="入力" id="inputbutton" /> -->
-      <!-- <input type="reset" value="リセット" id="resetbutton" /> -->
-      <!-- <input type="button" value="キャンセル" href="#" rel="modal:close" /> -->
-      <!-- <a href="#" rel="modal:close">Close</a> -->
     </div>
   </div>
 </body>
-<!--
-<body>
-  <div class="content_box">
-    <h3 class="tytle">スマート<span id="hatomoji">鳩</span>時計</h3>
-    <form action="" method="">
-      <div id="jsalarmclock">
-        <div class="current_time">
-          <span id="jsalarm_ct" style="letter-spacing: 2px"></span>
-        </div>
-        <div class="alarm_select_container">
-          <div class="alarm_select">
-            <div class="leftcolumn">from:</div> <span><select></select> :</span> <span><select></select> :</span> <span><select></select></span>
-          </div>
-          <div class="alarm_select">
-            <div class="leftcolumn">Break:</div> <span><select></select> :</span> <span><select></select> :</span> <span><select></select></span>
-          </div>
-          <div class="alarm_select">
-            <div class="leftcolumn">To:</div> <span><select></select> :</span> <span><select></select> :</span> <span><select></select></span>
-          </div>
-        </div>
-        <div>
-#                 <div class="leftcolumn">Set Alarm Action:</div> <input type="text" id="musicloc" size="55"
-#          value="https://www.youtube.com/watch?v=wHB3F6eXxBo" /> <span style="font: normal 11px Tahoma">*Location of page
-#          to launch</span>
-#      </div>
-          <input type="submit" value="Set" id="submitbutton" /> <input type="reset" value="Reset" id="resetbutton" />
-        </div>
-    </form>
-  </div>
-</body>
--->
-
 
 <script type="text/javascript">
 
@@ -130,324 +93,532 @@
 
 </script>
 
-<audio src="{% static 'smartclock/hototogisu.mp3' %}" id="audio1" class="bird"></audio>
-<audio src="{% static 'smartclock/kakko.mp3' %}" id="audio2" class="bird"></audio>
-<audio src="{% static 'smartclock/akahara.mp3' %}" id="audio3" class="bird"></audio>
-<audio src="{% static 'smartclock/dog.mp3' %}" id="audio4" class="animal"></audio>
-<audio src="{% static 'smartclock/taki.mp3' %}" id="audio5" class="nature"></audio>
-<audio src="{% static 'smartclock/kawa.mp3' %}" id="audio6" class="nature"></audio>
-<audio src="{% static 'smartclock/wave.mp3' %}" id="audio7" class="nature"></audio>
-<audio src="{% static 'smartclock/Bach.mp3' %}" id="audio8" class="classical_music"></audio>
-<audio src="{% static 'smartclock/Beethoven.mp3' %}" id="audio9" class="classical_music"></audio>
-<audio src="{% static 'smartclock/Mozart.mp3' %}" id="audio10" class="classical_music"></audio>
-<audio src="{% static 'smartclock/Rachmaninov.mp3' %}" id="audio11" class="classical_music"></audio>
-<audio src="{% static 'smartclock/Ravel.mp3' %}" id="audio12" class="classical_music"></audio>
+<!-- 埋め込み音声データ -->
 
-<audio src="{% static 'smartclock/birdsounds/120526oojuichi2.mp3' %}" id="birdsound1" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/12s02.mp3' %}" id="birdsound2" class="bird bird12"></audio>
-<audio src="{% static 'smartclock/birdsounds/sadoforest.mp3' %}" id="birdsound3" class="bird bird4"></audio>
-<audio src="{% static 'smartclock/birdsounds/akaashishigi_111003_hyogo_kuroda.mp3' %}" id="birdsound4" class="bird bird10"></audio>
-<audio src="{% static 'smartclock/birdsounds/akaeri_110702_sarobetsu_namba.mp3' %}" id="birdsound5" class="bird bird7"></audio>
-<audio src="{% static 'smartclock/birdsounds/akagera1_090619_osado_mju.mp3' %}" id="birdsound6" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/akahige_170920_yanbaru_morishita.mp3' %}" id="birdsound21" class="bird bird9"></audio>
-<audio src="{% static 'smartclock/birdsounds/akamozu_160522_nagano_hara.mp3' %}" id="birdsound26" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/akashobin_100512_shiiba_mju.mp3' %}" id="birdsound27" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/akashobin_150504_miyako_uemura.mp3' %}" id="birdsound28" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/amehi_160419_matsuzaka_miyagoe.mp3' %}" id="birdsound39" class="bird bird4"></audio>
-<audio src="{% static 'smartclock/birdsounds/amerikakoaji_140718_hikawahama_nuka.mp3' %}" id="birdsound40" class="bird bird7"></audio>
-<audio src="{% static 'smartclock/birdsounds/amurumusikui_160502_hyogo_kaji.mp3' %}" id="birdsound41" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/aoashishigi_20150819_oyama_hirano.mp3' %}" id="birdsound42" class="bird bird8"></audio>
-<audio src="{% static 'smartclock/birdsounds/aobato_0905_hyogo_kaji.mp3' %}" id="birdsound43" class="bird bird9"></audio>
-<audio src="{% static 'smartclock/birdsounds/aobato_140606_shiiba_mju.mp3' %}" id="birdsound44" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/aobazuku_060311_okinawa_kaji.mp3' %}" id="birdsound45" class="bird bird3"></audio>
-<audio src="{% static 'smartclock/birdsounds/aobazuku_060606_utsunomiya_hirano.mp3' %}" id="birdsound46" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/aobazuku_170509_miyake_kuroda.mp3' %}" id="birdsound47" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/aobazuku_170510_miyake_kuroda.mp3' %}" id="birdsound48" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/benihiwa_140121_nemuro_mju.mp3' %}" id="birdsound69" class="bird bird1"></audio>
-<audio src="{% static 'smartclock/birdsounds/benimashiko081118_watarase_hirano.mp3' %}" id="birdsound70" class="bird bird11"></audio>
-<audio src="{% static 'smartclock/birdsounds/benimashiko_090819_nemuro_mju.mp3' %}" id="birdsound71" class="bird bird8"></audio>
-<audio src="{% static 'smartclock/birdsounds/binzui_080702_asyoro_kuroda.mp3' %}" id="birdsound72" class="bird bird7"></audio>
-<audio src="{% static 'smartclock/birdsounds/binzui_080703_asyoro_kuroda.mp3' %}" id="birdsound73" class="bird bird7"></audio>
-<audio src="{% static 'smartclock/birdsounds/binzui_090519_kiso_mju.mp3' %}" id="birdsound74" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/binzui_0911_hyogo_kaji.mp3' %}" id="birdsound75" class="bird bird9"></audio>
-<audio src="{% static 'smartclock/birdsounds/bosogarasu_081021_watarase_hirano.mp3' %}" id="birdsound76" class="bird bird10"></audio>
-<audio src="{% static 'smartclock/birdsounds/bupposo970803_tottori_kuroda.mp3' %}" id="birdsound77" class="bird bird8"></audio>
-<audio src="{% static 'smartclock/birdsounds/bupposo_110730_kibi_kuroda.mp3' %}" id="birdsound78" class="bird bird7"></audio>
-<audio src="{% static 'smartclock/birdsounds/enaga_1002_hyogo_kaji.mp3' %}" id="birdsound97" class="bird bird10"></audio>
-<audio src="{% static 'smartclock/birdsounds/enaga_hyogo_101005_kaji.mp3' %}" id="birdsound98" class="bird bird10"></audio>
-<audio src="{% static 'smartclock/birdsounds/ezoaka_190409_sapporo_kurosawa.mp3' %}" id="birdsound99" class="bird bird4"></audio>
-<audio src="{% static 'smartclock/birdsounds/ezobitaki1_1009_hyogo_kaji.mp3' %}" id="birdsound100" class="bird bird10"></audio>
-<audio src="{% static 'smartclock/birdsounds/ezobitaki2_1010_hyogo_kaji.mp3' %}" id="birdsound101" class="bird bird10"></audio>
-<audio src="{% static 'smartclock/birdsounds/ezobitaki_051005_nasuhio_hirano.mp3' %}" id="birdsound102" class="bird bird10"></audio>
-<audio src="{% static 'smartclock/birdsounds/ezomushikui_040528_kokubunji_mju.mp3' %}" id="birdsound103" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/ezoraicho_080703_doto_kuroda2.mp3' %}" id="birdsound108" class="bird bird7"></audio>
-<audio src="{% static 'smartclock/birdsounds/gojyukara_140425_nasushiobara_hirano.mp3' %}" id="birdsound129" class="bird bird4"></audio>
-<audio src="{% static 'smartclock/birdsounds/gojyuukara_111206_nasu_hirano.mp3' %}" id="birdsound130" class="bird bird12"></audio>
-<audio src="{% static 'smartclock/birdsounds/hachikuma_140823_nikko_abe.mp3' %}" id="birdsound131" class="bird bird8"></audio>
-<audio src="{% static 'smartclock/birdsounds/hagimashiko_110121_ikeshima_mju.mp3' %}" id="birdsound132" class="bird bird1"></audio>
-<audio src="{% static 'smartclock/birdsounds/hagimashiko_160315_kochi_kuroda.mp3' %}" id="birdsound133" class="bird bird3"></audio>
-<audio src="{% static 'smartclock/birdsounds/hagimashiko_160315_kochi_kuroda2.mp3' %}" id="birdsound134" class="bird bird3"></audio>
-<audio src="{% static 'smartclock/birdsounds/haiiroochu_180503_nagasaki_yoshigai.mp3' %}" id="birdsound135" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/hajirokai_140214_tatsuno_kuroda.mp3' %}" id="birdsound136" class="bird bird2"></audio>
-<audio src="{% static 'smartclock/birdsounds/hakkacho_120514a_himeji_kuroda.mp3' %}" id="birdsound137" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/hakkacho_120514b_himeji_kuroda.mp3' %}" id="birdsound138" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/hakkacho_120514c_himeji_kuroda.mp3' %}" id="birdsound139" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/hakkacho_131122_tasuno_kuroda.mp3' %}" id="birdsound140" class="bird bird11"></audio>
-<audio src="{% static 'smartclock/birdsounds/hakusekirei_100316_utsunomiya.mp3' %}" id="birdsound141" class="bird bird3"></audio>
-<audio src="{% static 'smartclock/birdsounds/hakuseki_090318b_hitachi_hirano.mp3' %}" id="birdsound142" class="bird bird3"></audio>
-<audio src="{% static 'smartclock/birdsounds/hakuseki_090318_hitachi_hirano.mp3' %}" id="birdsound143" class="bird bird3"></audio>
-<audio src="{% static 'smartclock/birdsounds/hakuseki_140427_utsunomiya_hirano.mp3' %}" id="birdsound144" class="bird bird4"></audio>
-<audio src="{% static 'smartclock/birdsounds/hamashigi_121028_hyogo_kuroda.mp3' %}" id="birdsound145" class="bird bird10"></audio>
-<audio src="{% static 'smartclock/birdsounds/hiyodori_060511_kokubunji_mju.mp3' %}" id="birdsound193" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/hoaka_180615_nozori_mju.mp3' %}" id="birdsound198" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/hojirogamo_110325_tomakomai_namba.mp3' %}" id="birdsound199" class="bird bird3"></audio>
-<audio src="{% static 'smartclock/birdsounds/hojiro_060621_ichikai_mju.mp3' %}" id="birdsound200" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/hondorisu_hyogo_170421_kaji.mp3' %}" id="birdsound201" class="bird bird4"></audio>
-<audio src="{% static 'smartclock/birdsounds/honsei_100503_kunitachi_mju.mp3' %}" id="birdsound202" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/hooaka_060525_nasu_hirano.mp3' %}" id="birdsound203" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/hooaka_080505_nasumachi.mp3' %}" id="birdsound204" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/hoojiro_060506_fuchu_mju.mp3' %}" id="birdsound205" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/hoojiro_1004_hyogo_kaji.mp3' %}" id="birdsound206" class="bird bird4"></audio>
-<audio src="{% static 'smartclock/birdsounds/hoojiro_130604_kyohto_kaji.mp3' %}" id="birdsound207" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/horoku_090409_sanbanse_moriya.mp3' %}" id="birdsound208" class="bird bird4"></audio>
-<audio src="{% static 'smartclock/birdsounds/hoshigarasu_170607_osado_mju.mp3' %}" id="birdsound209" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/hoshigarasu_200824_norikura_kuroda.mp3' %}" id="birdsound210" class="bird bird8"></audio>
-<audio src="{% static 'smartclock/birdsounds/hototogisu-ueta-tokyo060610.mp3' %}" id="birdsound211" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/hototogisu_110609_okayama_kaji.mp3' %}" id="birdsound212" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/iijima_160516_miyake_kuroda.mp3' %}" id="birdsound217" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/ikaruchidori_100427_utsunomiya.mp3' %}" id="birdsound218" class="bird bird4"></audio>
-<audio src="{% static 'smartclock/birdsounds/ikaruchidori_130618_nasushiobara_hirano.mp3' %}" id="birdsound219" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/ikaru_0804_hyogo_kaji.mp3' %}" id="birdsound220" class="bird bird8"></audio>
-<audio src="{% static 'smartclock/birdsounds/ikaru_0805_hyogo_kaji.mp3' %}" id="birdsound221" class="bird bird8"></audio>
-<audio src="{% static 'smartclock/birdsounds/ikaru_0904_hyogo_kaji.mp3' %}" id="birdsound222" class="bird bird9"></audio>
-<audio src="{% static 'smartclock/birdsounds/jobitaki_160808_hyogo_kuroda.mp3' %}" id="birdsound251" class="bird bird8"></audio>
-<audio src="{% static 'smartclock/birdsounds/juichi_090527_shioya_hirano.mp3' %}" id="birdsound252" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/juuichi_0805_hyogo_kaji.mp3' %}" id="birdsound253" class="bird bird8"></audio>
-<audio src="{% static 'smartclock/birdsounds/jyoubitaki_121112_utsunomiya_hirano.mp3' %}" id="birdsound254" class="bird bird11"></audio>
-<audio src="{% static 'smartclock/birdsounds/kaistuburi_0906_hyogo_kaji.mp3' %}" id="birdsound255" class="bird bird9"></audio>
-<audio src="{% static 'smartclock/birdsounds/kaistuburi_1001_hyogo_kaji.mp3' %}" id="birdsound256" class="bird bird10"></audio>
-<audio src="{% static 'smartclock/birdsounds/kaitsuburi_070619_watarase.mp3' %}" id="birdsound257" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/kakesu_060317_fukuoka_kuroda.mp3' %}" id="birdsound261" class="bird bird3"></audio>
-<audio src="{% static 'smartclock/birdsounds/kakesu_080413_utsunomiya_hirano.mp3' %}" id="birdsound262" class="bird bird4"></audio>
-<audio src="{% static 'smartclock/birdsounds/kakesu_100503_utsunomiya.mp3' %}" id="birdsound263" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/kakesu_110227_utsunomiya_hirano.mp3' %}" id="birdsound264" class="bird bird2"></audio>
-<audio src="{% static 'smartclock/birdsounds/kakesu_110329_utsunomiya_hirano.mp3' %}" id="birdsound265" class="bird bird3"></audio>
-<audio src="{% static 'smartclock/birdsounds/kakesu_1103_hyogo_kaji.mp3' %}" id="birdsound266" class="bird bird11"></audio>
-<audio src="{% static 'smartclock/birdsounds/kakesu_110429_utsunomiya_hirano.mp3' %}" id="birdsound267" class="bird bird4"></audio>
-<audio src="{% static 'smartclock/birdsounds/kakesu_120210_nemuro_mju.mp3' %}" id="birdsound268" class="bird bird2"></audio>
-<audio src="{% static 'smartclock/birdsounds/karafutomushikui_200429_nagasaki_kuroda.mp3' %}" id="birdsound292" class="bird bird4"></audio>
-<audio src="{% static 'smartclock/birdsounds/karasubato_121108_kitakyu_mju.mp3' %}" id="birdsound293" class="bird bird11"></audio>
-<audio src="{% static 'smartclock/birdsounds/karugamo_0806_hyogo_kaji.mp3' %}" id="birdsound294" class="bird bird8"></audio>
-<audio src="{% static 'smartclock/birdsounds/karugamo_0910_hyogo_kaji.mp3' %}" id="birdsound295" class="bird bird9"></audio>
-<audio src="{% static 'smartclock/birdsounds/kasasagi_130603_muroran_kros.mp3' %}" id="birdsound296" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/kashiradaka_100410_utsunomiya.mp3' %}" id="birdsound297" class="bird bird4"></audio>
-<audio src="{% static 'smartclock/birdsounds/kawarahiwa_060512_hino_mju.mp3' %}" id="birdsound302" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/kawarahiwa_100624_utsunomiya.mp3' %}" id="birdsound303" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/kawarahiwa_1006_hyogo_kaji.mp3' %}" id="birdsound304" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/kawarahiwa_110122_ikeshima_mju.mp3' %}" id="birdsound305" class="bird bird1"></audio>
-<audio src="{% static 'smartclock/birdsounds/kawarahiwa_120817_muroran_kuros.mp3' %}" id="birdsound306" class="bird bird8"></audio>
-<audio src="{% static 'smartclock/birdsounds/kawarahiwa_130326_utsunomiya_hirano.mp3' %}" id="birdsound307" class="bird bird3"></audio>
-<audio src="{% static 'smartclock/birdsounds/kawarahiwa_130623_date_kros.mp3' %}" id="birdsound308" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/kawasemi_100223_watarase.mp3' %}" id="birdsound309" class="bird bird2"></audio>
-<audio src="{% static 'smartclock/birdsounds/kawasemi_160529_oyama_hirano.mp3' %}" id="birdsound310" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/kawau_091204_sano_hirano.mp3' %}" id="birdsound311" class="bird bird12"></audio>
-<audio src="{% static 'smartclock/birdsounds/kawau_121214_hyogo_kaji.mp3' %}" id="birdsound312" class="bird bird12"></audio>
-<audio src="{% static 'smartclock/birdsounds/kibitaki_090620_kosado_mju.mp3' %}" id="birdsound331" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/kijibato_120506_kokubunji_mju.mp3' %}" id="birdsound336" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/kiji_080413_utsunomiya_hirano.mp3' %}" id="birdsound337" class="bird bird4"></audio>
-<audio src="{% static 'smartclock/birdsounds/kiji_1008_aichi_kuroda.mp3' %}" id="birdsound338" class="bird bird10"></audio>
-<audio src="{% static 'smartclock/birdsounds/kikuitadaki100831_marunuma_hirano.mp3' %}" id="birdsound339" class="bird bird8"></audio>
-<audio src="{% static 'smartclock/birdsounds/kikuitadaki_0803_hyogo_kaji.mp3' %}" id="birdsound340" class="bird bird8"></audio>
-<audio src="{% static 'smartclock/birdsounds/kikuitadaki_100529_nasushiobara.mp3' %}" id="birdsound341" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/kikuitadaki_110402_maruyama_namba.mp3' %}" id="birdsound342" class="bird bird4"></audio>
-<audio src="{% static 'smartclock/birdsounds/kikuitadaki_121109_kitakyu_mju.mp3' %}" id="birdsound343" class="bird bird11"></audio>
-<audio src="{% static 'smartclock/birdsounds/kikuitadaki_190130_kosado_mju.mp3' %}" id="birdsound344" class="bird bird1"></audio>
-<audio src="{% static 'smartclock/birdsounds/kikuitadaki_190408_furano_cf.mp3' %}" id="birdsound345" class="bird bird4"></audio>
-<audio src="{% static 'smartclock/birdsounds/kimayumushikui_130428_mishima_okamoto.mp3' %}" id="birdsound346" class="bird bird4"></audio>
-<audio src="{% static 'smartclock/birdsounds/kimayu_151014_fukuoka_kuroda.mp3' %}" id="birdsound347" class="bird bird10"></audio>
-<audio src="{% static 'smartclock/birdsounds/kinbato_130424_miyako_mtakagi.mp3' %}" id="birdsound348" class="bird bird4"></audio>
-<audio src="{% static 'smartclock/birdsounds/kirenjaku_150302_setana_mju.mp3' %}" id="birdsound349" class="bird bird3"></audio>
-<audio src="{% static 'smartclock/birdsounds/kohakucho_151129_kaga_mju.mp3' %}" id="birdsound382" class="bird bird11"></audio>
-<audio src="{% static 'smartclock/birdsounds/kohakucyou_051107_tottori_kaji.mp3' %}" id="birdsound383" class="bird bird11"></audio>
-<audio src="{% static 'smartclock/birdsounds/kojukei1_060512_hino_mju.mp3' %}" id="birdsound384" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/kojukei2_060512_hino_mju.mp3' %}" id="birdsound385" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/kojukei_20200309_oita_ikenaga.mp3' %}" id="birdsound386" class="bird bird3"></audio>
-<audio src="{% static 'smartclock/birdsounds/kojurin_040614_tonegawa_kuroda.mp3' %}" id="birdsound387" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/kojyukei_120704_sano_hirano.mp3' %}" id="birdsound388" class="bird bird7"></audio>
-<audio src="{% static 'smartclock/birdsounds/kokumaru_130410_aomori_kuroda.mp3' %}" id="birdsound393" class="bird bird4"></audio>
-<audio src="{% static 'smartclock/birdsounds/komadori_060605_yaita_hirano.mp3' %}" id="birdsound394" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/komadori_0804_hyogo_kaji.mp3' %}" id="birdsound395" class="bird bird8"></audio>
-<audio src="{% static 'smartclock/birdsounds/komimizuku_161203_akita_hara.mp3' %}" id="birdsound396" class="bird bird12"></audio>
-<audio src="{% static 'smartclock/birdsounds/komori_091212_ehime_kuroda.mp3' %}" id="birdsound397" class="bird bird12"></audio>
-<audio src="{% static 'smartclock/birdsounds/komukudori_100610_nikkou.mp3' %}" id="birdsound398" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/komukudori_150523_muroran_kuros.mp3' %}" id="birdsound399" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/komukudori_150525_muroran_kuros.mp3' %}" id="birdsound400" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/komushikui_070627_magadan_saito.mp3' %}" id="birdsound401" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/koshiaka_160505_mooka_hirano.mp3' %}" id="birdsound424" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/koshiaka_200525_izu_mju.mp3' %}" id="birdsound425" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/koyoshikiri_090722_watarase_hirano.mp3' %}" id="birdsound429" class="bird bird7"></audio>
-<audio src="{% static 'smartclock/birdsounds/kuina_060801_watarase_hirano.mp3' %}" id="birdsound430" class="bird bird8"></audio>
-<audio src="{% static 'smartclock/birdsounds/kuina_071127_watarase_hirano.mp3' %}" id="birdsound431" class="bird bird11"></audio>
-<audio src="{% static 'smartclock/birdsounds/kuina_081104_watarase_hirano.mp3' %}" id="birdsound432" class="bird bird11"></audio>
-<audio src="{% static 'smartclock/birdsounds/kuina_110426_watarase_hirano.mp3' %}" id="birdsound433" class="bird bird4"></audio>
-<audio src="{% static 'smartclock/birdsounds/kukuitadaki_081028_nasushio_hirano.mp3' %}" id="birdsound434" class="bird bird10"></audio>
-<audio src="{% static 'smartclock/birdsounds/kumagera_060621_hokkaidou_kaji.mp3' %}" id="birdsound435" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/kumagera_110326b_tomakomai_namba.mp3' %}" id="birdsound436" class="bird bird3"></audio>
-<audio src="{% static 'smartclock/birdsounds/kumagera_110326_tomakomai_namba.mp3' %}" id="birdsound437" class="bird bird3"></audio>
-<audio src="{% static 'smartclock/birdsounds/kumagera_170427_uryu_mju.mp3' %}" id="birdsound438" class="bird bird4"></audio>
-<audio src="{% static 'smartclock/birdsounds/kumataka120303_ishikawa_kuroda.mp3' %}" id="birdsound439" class="bird bird3"></audio>
-<audio src="{% static 'smartclock/birdsounds/kurojii_090620_osado_mju.mp3' %}" id="birdsound445" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/mahiwa_090318_hitachi_hirano.mp3' %}" id="birdsound464" class="bird bird3"></audio>
-<audio src="{% static 'smartclock/birdsounds/mahiwa_200407_chichibu_cf.mp3' %}" id="birdsound465" class="bird bird4"></audio>
-<audio src="{% static 'smartclock/birdsounds/mahiwa_20200404_chichibu_cf.mp3' %}" id="birdsound466" class="bird bird4"></audio>
-<audio src="{% static 'smartclock/birdsounds/makinosennyuu_040708_hokkaidou_kaji.mp3' %}" id="birdsound467" class="bird bird7"></audio>
-<audio src="{% static 'smartclock/birdsounds/makino_110702_sarobetsu_namba.mp3' %}" id="birdsound468" class="bird bird7"></audio>
-<audio src="{% static 'smartclock/birdsounds/mamichajinai1_0604_hyogo_kaji.mp3' %}" id="birdsound469" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/mamichajinai2_0605_hyogo_kaji.mp3' %}" id="birdsound470" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/mamichajinai_121013_utsunomiya_hirano.mp3' %}" id="birdsound471" class="bird bird10"></audio>
-<audio src="{% static 'smartclock/birdsounds/mamichajinai_hyogo_111127_kaji.mp3' %}" id="birdsound472" class="bird bird11"></audio>
-<audio src="{% static 'smartclock/birdsounds/mamijiro_070522_kanuma_hirano.mp3' %}" id="birdsound473" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/mamitahi_121109_kitakyu_moriya.mp3' %}" id="birdsound474" class="bird bird11"></audio>
-<audio src="{% static 'smartclock/birdsounds/meboso_100531_hayachine_mikami.mp3' %}" id="birdsound479" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/meboso_110619_hachimantai_mikami.mp3' %}" id="birdsound480" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/medaichidori_120503_tatsuno_kuroda.mp3' %}" id="birdsound481" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/meguro_110416_hahajima_mju.mp3' %}" id="birdsound482" class="bird bird4"></audio>
-<audio src="{% static 'smartclock/birdsounds/meguro_110417_hahajima_mju.mp3' %}" id="birdsound483" class="bird bird4"></audio>
-<audio src="{% static 'smartclock/birdsounds/mejiroc_160516_miyake_kuroda.mp3' %}" id="birdsound484" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/mejiro_040504_kokubunji_mju.mp3' %}" id="birdsound485" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/mejiro_0703_hyogo_kaji.mp3' %}" id="birdsound486" class="bird bird7"></audio>
-<audio src="{% static 'smartclock/birdsounds/mejiro_0910_hyogo_kaji.mp3' %}" id="birdsound487" class="bird bird9"></audio>
-<audio src="{% static 'smartclock/birdsounds/mejiro_100112_utsunomiya_hirano.mp3' %}" id="birdsound488" class="bird bird1"></audio>
-<audio src="{% static 'smartclock/birdsounds/mejiro_150620_utsunomiya_hirano.mp3' %}" id="birdsound491" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/mejiro_160516_miyake_kuroda.mp3' %}" id="birdsound492" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/mifuuzuraf_130519_kiyamu_oshiro.mp3' %}" id="birdsound493" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/mosuke_160516_miyake_kuroda.mp3' %}" id="birdsound511" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/mozu_070625_chikuma_kasahara.mp3' %}" id="birdsound512" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/mozu_081014_watarase_hirano.mp3' %}" id="birdsound513" class="bird bird10"></audio>
-<audio src="{% static 'smartclock/birdsounds/mozu_1002_hyogo_kaji.mp3' %}" id="birdsound514" class="bird bird10"></audio>
-<audio src="{% static 'smartclock/birdsounds/mozu_100331_watarase.mp3' %}" id="birdsound515" class="bird bird3"></audio>
-<audio src="{% static 'smartclock/birdsounds/mozu_100610_nikkou.mp3' %}" id="birdsound516" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/nobitaki2_070620_nagano_kaji.mp3' %}" id="birdsound534" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/nobitaki_120607_senjyougahara_hirano.mp3' %}" id="birdsound535" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/nojiko_090512_nasu_hirano.mp3' %}" id="birdsound540" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/nojiko_110523_yamanaka_mju.mp3' %}" id="birdsound541" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/nojiko_170618_minamiaizu_mju.mp3' %}" id="birdsound542" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/nosuri_091204_sano_hirano.mp3' %}" id="birdsound543" class="bird bird12"></audio>
-<audio src="{% static 'smartclock/birdsounds/nosuri_121227_tatsuno_kuroda.mp3' %}" id="birdsound544" class="bird bird12"></audio>
-<audio src="{% static 'smartclock/birdsounds/nosuri_130402_aomori_kuroda.mp3' %}" id="birdsound545" class="bird bird4"></audio>
-<audio src="{% static 'smartclock/birdsounds/nosuri_130407_aomori_kuroda.mp3' %}" id="birdsound546" class="bird bird4"></audio>
-<audio src="{% static 'smartclock/birdsounds/nosuri_130517_muroran_kros.mp3' %}" id="birdsound547" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/nyunai_080614_nikko_hirano.mp3' %}" id="birdsound548" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/nyuunaisuzume_110809_nikko_hirano.mp3' %}" id="birdsound549" class="bird bird8"></audio>
-<audio src="{% static 'smartclock/birdsounds/okonoha_090521_iwase_abe.mp3' %}" id="birdsound568" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/okonoha_110509_nikko_abe.mp3' %}" id="birdsound569" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/okonoha_110518_nikko_abe.mp3' %}" id="birdsound570" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/okonoha_130505_nikko_abe.mp3' %}" id="birdsound571" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/okonoha_140413_nikko_abe.mp3' %}" id="birdsound572" class="bird bird4"></audio>
-<audio src="{% static 'smartclock/birdsounds/omashiko_121203_tottori_kuroda.mp3' %}" id="birdsound573" class="bird bird12"></audio>
-<audio src="{% static 'smartclock/birdsounds/omizunagi_120801_fukuoka_mju.mp3' %}" id="birdsound574" class="bird bird8"></audio>
-<audio src="{% static 'smartclock/birdsounds/omushikui_150529_fukuoka_kuroda.mp3' %}" id="birdsound575" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/onagagamo1_0801_hyogo_kaji.mp3' %}" id="birdsound576" class="bird bird8"></audio>
-<audio src="{% static 'smartclock/birdsounds/onagagamo2_0801_hyogo_kaji.mp3' %}" id="birdsound577" class="bird bird8"></audio>
-<audio src="{% static 'smartclock/birdsounds/onaga_070411_kokubunji_mju.mp3' %}" id="birdsound578" class="bird bird4"></audio>
-<audio src="{% static 'smartclock/birdsounds/onaga_120506_kokubunji_mju.mp3' %}" id="birdsound579" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/ooban_111227_watarase_hirano.mp3' %}" id="birdsound583" class="bird bird12"></audio>
-<audio src="{% static 'smartclock/birdsounds/oojishigi1_070620_nagano_kaji.mp3' %}" id="birdsound584" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/oojishigi2_070620_nagano_kaji.mp3' %}" id="birdsound585" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/ookawarahiwa_140427_mishima_okamoto.mp3' %}" id="birdsound586" class="bird bird4"></audio>
-<audio src="{% static 'smartclock/birdsounds/oomushikui_110610_sapporo_namba.mp3' %}" id="birdsound587" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/ooruri_060526_tanzawa_mju.mp3' %}" id="birdsound588" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/ooruri_0905_hyogo_kaji.mp3' %}" id="birdsound589" class="bird bird9"></audio>
-<audio src="{% static 'smartclock/birdsounds/oshidori_170216_hyogo_kuroda.mp3' %}" id="birdsound605" class="bird bird2"></audio>
-<audio src="{% static 'smartclock/birdsounds/osorihashi_181028_sanbanse_kuroda.mp3' %}" id="birdsound606" class="bird bird10"></audio>
-<audio src="{% static 'smartclock/birdsounds/ostoaka2_140307_amami_ishida.mp3' %}" id="birdsound607" class="bird bird3"></audio>
-<audio src="{% static 'smartclock/birdsounds/ostoaka_140307d_amami_ishida.mp3' %}" id="birdsound608" class="bird bird3"></audio>
-<audio src="{% static 'smartclock/birdsounds/ostooaka090518_amami_isida.mp3' %}" id="birdsound610" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/otaka_060606_fujioka_hirano.mp3' %}" id="birdsound611" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/otaka_120112_utsunomiya_hirano.mp3' %}" id="birdsound612" class="bird bird1"></audio>
-<audio src="{% static 'smartclock/birdsounds/otoratugumi_100325_amami-anengachi_ik.mp3' %}" id="birdsound613" class="bird bird3"></audio>
-<audio src="{% static 'smartclock/birdsounds/otora_160303_kinsakubaru_ishida.mp3' %}" id="birdsound614" class="bird bird3"></audio>
-<audio src="{% static 'smartclock/birdsounds/oyoshikiri_140727_chikuma_kasahara.mp3' %}" id="birdsound615" class="bird bird7"></audio>
-<audio src="{% static 'smartclock/birdsounds/raicho_100526_norikura_hotta.mp3' %}" id="birdsound616" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/rakashobin_120419_yambaru_moriya.mp3' %}" id="birdsound617" class="bird bird4"></audio>
-<audio src="{% static 'smartclock/birdsounds/segurokakko_150523_tsushima_mju.mp3' %}" id="birdsound655" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/segurokakko_180612_kokonoe_ikenaga.mp3' %}" id="birdsound656" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/segurokamome_110208_sado_mju.mp3' %}" id="birdsound657" class="bird bird2"></audio>
-<audio src="{% static 'smartclock/birdsounds/segurosekirei_100316_utsunomiya.mp3' %}" id="birdsound658" class="bird bird3"></audio>
-<audio src="{% static 'smartclock/birdsounds/seguroseki_090102_utsunomiya_hirano.mp3' %}" id="birdsound659" class="bird bird1"></audio>
-<audio src="{% static 'smartclock/birdsounds/seguroseki_090312_nasu_hirano.mp3' %}" id="birdsound660" class="bird bird3"></audio>
-<audio src="{% static 'smartclock/birdsounds/seitaka_200701_hyogo_kuroda.mp3' %}" id="birdsound661" class="bird bird7"></audio>
-<audio src="{% static 'smartclock/birdsounds/seitaka_200702_hyogo_kuroda.mp3' %}" id="birdsound662" class="bird bird7"></audio>
-<audio src="{% static 'smartclock/birdsounds/seitaka_200704_hyogo_kuroda.mp3' %}" id="birdsound663" class="bird bird7"></audio>
-<audio src="{% static 'smartclock/birdsounds/seitaka_200718_hyogo_kuroda.mp3' %}" id="birdsound664" class="bird bird7"></audio>
-<audio src="{% static 'smartclock/birdsounds/sekka_090805_watarase_hirano.mp3' %}" id="birdsound665" class="bird bird8"></audio>
-<audio src="{% static 'smartclock/birdsounds/sekka_111017_hyogo_kuroda.mp3' %}" id="birdsound666" class="bird bird10"></audio>
-<audio src="{% static 'smartclock/birdsounds/sekka_20101125_watarase_hirano.mp3' %}" id="birdsound667" class="bird bird11"></audio>
-<audio src="{% static 'smartclock/birdsounds/sendai_180625_uryu_kuros.mp3' %}" id="birdsound672" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/sendai_200514_chichibu_mju.mp3' %}" id="birdsound673" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/shibariajurin_191106_nagasaki_yoshigai.mp3' %}" id="birdsound674" class="bird bird11"></audio>
-<audio src="{% static 'smartclock/birdsounds/shijukara_070324_kunitachi_mju.mp3' %}" id="birdsound675" class="bird bird3"></audio>
-<audio src="{% static 'smartclock/birdsounds/shijukara_100223_sado_mju.mp3' %}" id="birdsound676" class="bird bird2"></audio>
-<audio src="{% static 'smartclock/birdsounds/shijukara_120530_osado_mju.mp3' %}" id="birdsound677" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/shijukara_150607_kokubunji_mju.mp3' %}" id="birdsound678" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/sijukara_190412_fukuoka_kuroda.mp3' %}" id="birdsound711" class="bird bird4"></audio>
-<audio src="{% static 'smartclock/birdsounds/sijuukara5_0803_hyogo_kaji.mp3' %}" id="birdsound716" class="bird bird8"></audio>
-<audio src="{% static 'smartclock/birdsounds/sijuukara6_0803_hyogo_kaji.mp3' %}" id="birdsound717" class="bird bird8"></audio>
-<audio src="{% static 'smartclock/birdsounds/sijuukara7_0902_hyogo_kaji.mp3' %}" id="birdsound718" class="bird bird9"></audio>
-<audio src="{% static 'smartclock/birdsounds/sijuukara8_0903_hyogo_kaji.mp3' %}" id="birdsound719" class="bird bird9"></audio>
-<audio src="{% static 'smartclock/birdsounds/sijuukara9_1006_hyogo_kaji.mp3' %}" id="birdsound720" class="bird bird10"></audio>
-<audio src="{% static 'smartclock/birdsounds/sijyukara_110703_utsunomiya_hirano.mp3' %}" id="birdsound721" class="bird bird7"></audio>
-<audio src="{% static 'smartclock/birdsounds/sirohara_1102_hyogo_kaji.mp3' %}" id="birdsound722" class="bird bird11"></audio>
-<audio src="{% static 'smartclock/birdsounds/suzume_040504_kokubunji_mju.mp3' %}" id="birdsound727" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/suzume_100525_utsunomiya.mp3' %}" id="birdsound728" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/suzume_120210_nemuro_mju.mp3' %}" id="birdsound729" class="bird bird2"></audio>
-<audio src="{% static 'smartclock/birdsounds/suzume_190814_hino_koyama.mp3' %}" id="birdsound730" class="bird bird8"></audio>
-<audio src="{% static 'smartclock/birdsounds/tageri_121115_hyogo_kuroda.mp3' %}" id="birdsound731" class="bird bird11"></audio>
-<audio src="{% static 'smartclock/birdsounds/tageri_121116_hyogo_kuroda.mp3' %}" id="birdsound732" class="bird bird11"></audio>
-<audio src="{% static 'smartclock/birdsounds/tageri_170330_watarase_hirano.mp3' %}" id="birdsound733" class="bird bird3"></audio>
-<audio src="{% static 'smartclock/birdsounds/tagogaeru_060603_okutadami_mju.mp3' %}" id="birdsound734" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/tahibari_0802_hyogo_kaji.mp3' %}" id="birdsound735" class="bird bird8"></audio>
-<audio src="{% static 'smartclock/birdsounds/tahibari_111015_nemuro_mju.mp3' %}" id="birdsound736" class="bird bird10"></audio>
-<audio src="{% static 'smartclock/birdsounds/tamashigi_070623_hyogo_kuroda.mp3' %}" id="birdsound741" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/tancho2_080701_doto_kuroda.mp3' %}" id="birdsound742" class="bird bird7"></audio>
-<audio src="{% static 'smartclock/birdsounds/tancho_080701_doto_kuroda.mp3' %}" id="birdsound743" class="bird bird7"></audio>
-<audio src="{% static 'smartclock/birdsounds/tanekoma_160516_miyake_kuroda.mp3' %}" id="birdsound744" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/tashigi_111004_hyogo_kuroda.mp3' %}" id="birdsound745" class="bird bird10"></audio>
-<audio src="{% static 'smartclock/birdsounds/tashigi_121027_hyogo_kuroda.mp3' %}" id="birdsound746" class="bird bird10"></audio>
-<audio src="{% static 'smartclock/birdsounds/tobi_110308_watarase_hirano.mp3' %}" id="birdsound747" class="bird bird3"></audio>
-<audio src="{% static 'smartclock/birdsounds/toki3_150202_sado_mju.mp3' %}" id="birdsound748" class="bird bird2"></audio>
-<audio src="{% static 'smartclock/birdsounds/toki_141223_sado_mju.mp3' %}" id="birdsound749" class="bird bird12"></audio>
-<audio src="{% static 'smartclock/birdsounds/tsumenagasekirei_050621_hokkaidou_kaji.mp3' %}" id="birdsound765" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/tsumi_080412_utsunomiya_hirano.mp3' %}" id="birdsound766" class="bird bird4"></audio>
-<audio src="{% static 'smartclock/birdsounds/tsumi_090317_utsunomiya_hirano.mp3' %}" id="birdsound767" class="bird bird3"></audio>
-<audio src="{% static 'smartclock/birdsounds/tsumi_090420_kokubunji_mju.mp3' %}" id="birdsound768" class="bird bird4"></audio>
-<audio src="{% static 'smartclock/birdsounds/tsumi_10326_Utsunomiya_hirano.mp3' %}" id="birdsound769" class="bird bird3"></audio>
-<audio src="{% static 'smartclock/birdsounds/tsumi_120405_utsunomiya_hirano.mp3' %}" id="birdsound770" class="bird bird4"></audio>
-<audio src="{% static 'smartclock/birdsounds/uchiyama_c1_090627_kashima_kuroda.mp3' %}" id="birdsound780" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/uchiyama_c2_090627_kashima_kuroda.mp3' %}" id="birdsound781" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/uguisu_040421_kokubunji_mju.mp3' %}" id="birdsound782" class="bird bird4"></audio>
-<audio src="{% static 'smartclock/birdsounds/uguisu_080524_nasushiobara.mp3' %}" id="birdsound783" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/uguisu_0812_hyogo_kaji.mp3' %}" id="birdsound784" class="bird bird8"></audio>
-<audio src="{% static 'smartclock/birdsounds/uguisu_090318_hyogo_kaji.mp3' %}" id="birdsound785" class="bird bird3"></audio>
-<audio src="{% static 'smartclock/birdsounds/uguisu_101125_watarase_hirano.mp3' %}" id="birdsound786" class="bird bird11"></audio>
-<audio src="{% static 'smartclock/birdsounds/uguisu_110417_hahajima_mju.mp3' %}" id="birdsound787" class="bird bird4"></audio>
-<audio src="{% static 'smartclock/birdsounds/uguisu_150510_shiga_cf.mp3' %}" id="birdsound788" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/yabusame_0709_hyogo_kaji.mp3' %}" id="birdsound803" class="bird bird7"></audio>
-<audio src="{% static 'smartclock/birdsounds/yabusame_080407_ehime_kuroda.mp3' %}" id="birdsound804" class="bird bird4"></audio>
-<audio src="{% static 'smartclock/birdsounds/yabusame_0804_hyogo_kaji.mp3' %}" id="birdsound805" class="bird bird8"></audio>
-<audio src="{% static 'smartclock/birdsounds/yabusame_080618_nara_kuroda.mp3' %}" id="birdsound806" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/yabusame_0905_hyogo_kaji.mp3' %}" id="birdsound807" class="bird bird9"></audio>
-<audio src="{% static 'smartclock/birdsounds/yabusame_0906_hyogo_kaji.mp3' %}" id="birdsound808" class="bird bird9"></audio>
-<audio src="{% static 'smartclock/birdsounds/yabusame_100508_yahaba_mikami.mp3' %}" id="birdsound809" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/yabusame_120628_sapporo_kawaji.mp3' %}" id="birdsound810" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/yabusame_160501_hyogo_kaji.mp3' %}" id="birdsound811" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/yairocho_090602_nagano_uematsu.mp3' %}" id="birdsound812" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/yamagera_141025_nopporo_mju.mp3' %}" id="birdsound833" class="bird bird10"></audio>
-<audio src="{% static 'smartclock/birdsounds/yamasemi_050609_chikuma_kasa.mp3' %}" id="birdsound834" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/yamasemi_140506_hyogo_kuroda.mp3' %}" id="birdsound835" class="bird bird5"></audio>
-<audio src="{% static 'smartclock/birdsounds/zuaka_9806_takara_anezaki.mp3' %}" id="birdsound854" class="bird bird6"></audio>
-<audio src="{% static 'smartclock/birdsounds/zugurokamome_121122_hyogo_kuroda.mp3' %}" id="birdsound855" class="bird bird11"></audio>
-<audio src="{% static 'smartclock/birdsounds/zugurokamome_121123_hyogo_kuroda.mp3' %}" id="birdsound856" class="bird bird11"></audio>
+<!-- Opening -->
+<audio src="{% static 'smartclock/Beethoven_Symphony_No_6.mp3' %}" id="opening" class="opening" preload="metadata"></audio>
+
+<!-- bird sound -->
+<audio src="{% static 'smartclock/birdsounds/12s02.mp3' %}" id="birdsound2" class="bird bird12" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/akaashishigi_111003_hyogo_kuroda.mp3' %}" id="birdsound4" class="bird bird10" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/akaeri_110702_sarobetsu_namba.mp3' %}" id="birdsound5" class="bird bird7" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/akagera1_090619_osado_mju.mp3' %}" id="birdsound6" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/akahara_c_07517_yaitashi_hirano.mp3' %}" id="birdsound15" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/Akahige_060204a_ishigaki_seki.mp3' %}" id="birdsound16" class="bird bird2" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/akahige_120211_amami_ishida.mp3' %}" id="birdsound18" class="bird bird2" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/Akahige_160204_ishigaki_seki.mp3' %}" id="birdsound20" class="bird bird2" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/akakokko_160701_miyake_kuroda.mp3' %}" id="birdsound23" class="bird bird7" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/akakokko_170508_miyake_kuroda.mp3' %}" id="birdsound24" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/akamashiko_kochi_hashi.mp3' %}" id="birdsound25" class="bird bird8" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/akashobin_150613_okutadami_abe.mp3' %}" id="birdsound31" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/akasho_9806_takara_anezaki.mp3' %}" id="birdsound32" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/amagaeru_060607_hino_mju.mp3' %}" id="birdsound33" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/amatsubame_120719_muroran_kuros.mp3' %}" id="birdsound35" class="bird bird7" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/amatsubame_120817_muroran_kuros.mp3' %}" id="birdsound36" class="bird bird8" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/amatsubame_140528_wakayama_kuroda.mp3' %}" id="birdsound37" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/amerikakoaji_140718_hikawahama_nuka.mp3' %}" id="birdsound40" class="bird bird7" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/aoashishigi_20150819_oyama_hirano.mp3' %}" id="birdsound42" class="bird bird8" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/aobato_0905_hyogo_kaji.mp3' %}" id="birdsound43" class="bird bird9" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/aobazuku_060311_okinawa_kaji.mp3' %}" id="birdsound45" class="bird bird3" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/aobazuku_060606_utsunomiya_hirano.mp3' %}" id="birdsound46" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/aogera1_070421_kokubunji_mju.mp3' %}" id="birdsound50" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/aogera2_070516_miyagase_mju.mp3' %}" id="birdsound51" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/aogera_1004_hyogo_kaji.mp3' %}" id="birdsound52" class="bird bird10" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/aogera_121016_nasushiobara_hirano.mp3' %}" id="birdsound53" class="bird bird10" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/aosagi_090409_asahikawa_matsunaga.mp3' %}" id="birdsound59" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/arisui_191030_nagoya_yasuda.mp3' %}" id="birdsound61" class="bird bird10" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/atori_120111_chichibu_mju.mp3' %}" id="birdsound62" class="bird bird1" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/atori_120323_utsunomiya_hirano.mp3' %}" id="birdsound63" class="bird bird3" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/atori_160401_hokuto_mikami.mp3' %}" id="birdsound64" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/ban_080600_hyougo_kaji.mp3' %}" id="birdsound66" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/ban_090424_watarase_hirano.mp3' %}" id="birdsound67" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/ban_160528_himeji_kuroda.mp3' %}" id="birdsound68" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/benihiwa_140121_nemuro_mju.mp3' %}" id="birdsound69" class="bird bird1" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/benimashiko_090819_nemuro_mju.mp3' %}" id="birdsound71" class="bird bird8" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/binzui_0911_hyogo_kaji.mp3' %}" id="birdsound75" class="bird bird9" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/bosogarasu_081021_watarase_hirano.mp3' %}" id="birdsound76" class="bird bird10" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/bupposo970803_tottori_kuroda.mp3' %}" id="birdsound77" class="bird bird8" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/bupposo_110730_kibi_kuroda.mp3' %}" id="birdsound78" class="bird bird7" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/chogenbo_130219_utsunomiya_hirano.mp3' %}" id="birdsound83" class="bird bird2" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/chogenbo_141026_hyogo_kuroda.mp3' %}" id="birdsound84" class="bird bird10" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/chogenbo_keikai_130303_utsunomiya_hirano.mp3' %}" id="birdsound85" class="bird bird3" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/chuhi_080110_watarase_hirano.mp3' %}" id="birdsound86" class="bird bird1" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/chuhi_091124_watarase_hirano.mp3' %}" id="birdsound87" class="bird bird11" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/chushaku1_120430_tatsuno_kuroda.mp3' %}" id="birdsound88" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/chushaku_120430_tatsuno_kuroda.mp3' %}" id="birdsound90" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/daisagi_080315_himeji.mp3' %}" id="birdsound91" class="bird bird3" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/dobato_100506_kunitachi_mju.mp3' %}" id="birdsound93" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/enaga_0703_hyogo_kaji.mp3' %}" id="birdsound95" class="bird bird7" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/enaga_0905_hyogo_kaji.mp3' %}" id="birdsound96" class="bird bird9" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/enaga_1002_hyogo_kaji.mp3' %}" id="birdsound97" class="bird bird10" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/enaga_hyogo_101005_kaji.mp3' %}" id="birdsound98" class="bird bird10" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/ezobitaki1_1009_hyogo_kaji.mp3' %}" id="birdsound100" class="bird bird10" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/ezobitaki_051005_nasuhio_hirano.mp3' %}" id="birdsound102" class="bird bird10" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/ezomushikui_110518_chichibu_mju.mp3' %}" id="birdsound104" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/ezosen_090819_nemuro_mju.mp3' %}" id="birdsound111" class="bird bird8" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/ezosen_130603_muroran_kuros.mp3' %}" id="birdsound112" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/fukurou_070605_nasushiobara_hirano.mp3' %}" id="birdsound113" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/fukuro_070514_tanzawa_mju.mp3' %}" id="birdsound114" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/fukuro_110425_osaka_murahama.mp3' %}" id="birdsound115" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/fukuro_140510_nikko_abe.mp3' %}" id="birdsound117" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/fukuro_160417_osaka_murahama.mp3' %}" id="birdsound118" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/gabicho_100625_tama_miya.mp3' %}" id="birdsound121" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/ginmuku_150326_cheju_mju.mp3' %}" id="birdsound122" class="bird bird3" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/gojukarahina_140514_kyoto_kaji.mp3' %}" id="birdsound124" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/gojukara_070928_nasushio_hirano.mp3' %}" id="birdsound125" class="bird bird9" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/hachikuma_140823_nikko_abe.mp3' %}" id="birdsound131" class="bird bird8" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/hagimashiko_110121_ikeshima_mju.mp3' %}" id="birdsound132" class="bird bird1" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/hagimashiko_160315_kochi_kuroda.mp3' %}" id="birdsound133" class="bird bird3" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/hagimashiko_160315_kochi_kuroda2.mp3' %}" id="birdsound134" class="bird bird3" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/haiiroochu_180503_nagasaki_yoshigai.mp3' %}" id="birdsound135" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/hajirokai_140214_tatsuno_kuroda.mp3' %}" id="birdsound136" class="bird bird2" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/hakkacho_120514a_himeji_kuroda.mp3' %}" id="birdsound137" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/hakkacho_120514c_himeji_kuroda.mp3' %}" id="birdsound139" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/hakuseki_090318b_hitachi_hirano.mp3' %}" id="birdsound142" class="bird bird3" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/hakuseki_090318_hitachi_hirano.mp3' %}" id="birdsound143" class="bird bird3" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/hamashigi_121028_hyogo_kuroda.mp3' %}" id="birdsound145" class="bird bird10" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/hamashigi_130826_hyogo_kuroda.mp3' %}" id="birdsound146" class="bird bird8" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/harioama_080704_doto_kuroda.mp3' %}" id="birdsound147" class="bird bird7" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/hashiboso_090818_nemuro_mju.mp3' %}" id="birdsound149" class="bird bird8" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/hashibutogarasu_120526_utsunomiya_hirano.mp3' %}" id="birdsound150" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/hashibuto_060429_kokubunji_mju.mp3' %}" id="birdsound153" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/hasiboso_130530_mihara_ito.mp3' %}" id="birdsound155" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/hasibutogara_130218_muroran_kros.mp3' %}" id="birdsound156" class="bird bird2" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/hayabusay_130801_muroan_kros.mp3' %}" id="birdsound157" class="bird bird8" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/hayabusa_131211_tottori_kuroda.mp3' %}" id="birdsound159" class="bird bird12" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/hayabusa_160116_choshi_mju.mp3' %}" id="birdsound160" class="bird bird1" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/hibari_060621_mooka_mju.mp3' %}" id="birdsound161" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/hibari_100528_nasumachi.mp3' %}" id="birdsound162" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/hidorigamo_0801_hyogo_kaji.mp3' %}" id="birdsound163" class="bird bird8" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/hidorigamo_121214_hyogo_kaji.mp3' %}" id="birdsound164" class="bird bird12" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/higaraj_14061810_osado_mju.mp3' %}" id="birdsound165" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/higara_090528_chichibu_mju.mp3' %}" id="birdsound166" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/higara_120111_chichibu_mju.mp3' %}" id="birdsound170" class="bird bird1" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/higegabi2_141015_kochi_kuroda.mp3' %}" id="birdsound174" class="bird bird10" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/higegabi_141015_kochi_kuroda.mp3' %}" id="birdsound175" class="bird bird10" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/higegabi_170727_kochi_kuroda.mp3' %}" id="birdsound176" class="bird bird7" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/hikigaeru_110313_kokubunji_mju.mp3' %}" id="birdsound177" class="bird bird3" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/hikuina_151124_watarase_hirano.mp3' %}" id="birdsound180" class="bird bird11" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/hikuina_watarase_090511_hirano.mp3' %}" id="birdsound181" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/himeama2_150510_naganuma_mju.mp3' %}" id="birdsound182" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/himeama_140614_fuji_mju.mp3' %}" id="birdsound183" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/himeama_150510_naganuma_mju.mp3' %}" id="birdsound184" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/hinakomori_140527_wakayama_kuroda.mp3' %}" id="birdsound186" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/hishikui_111029_osatsu_namba.mp3' %}" id="birdsound190" class="bird bird10" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/hiyodorihina_140607_hyogo_kaji.mp3' %}" id="birdsound192" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/hiyodori_060511_kokubunji_mju.mp3' %}" id="birdsound193" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/hoaka_070708_ishikari_moriya.mp3' %}" id="birdsound197" class="bird bird7" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/hondorisu_hyogo_170421_kaji.mp3' %}" id="birdsound201" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/honsei_100503_kunitachi_mju.mp3' %}" id="birdsound202" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/hooaka_060525_nasu_hirano.mp3' %}" id="birdsound203" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/hooaka_080505_nasumachi.mp3' %}" id="birdsound204" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/hoojiro_060506_fuchu_mju.mp3' %}" id="birdsound205" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/hoojiro_130604_kyohto_kaji.mp3' %}" id="birdsound207" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/horoku_090409_sanbanse_moriya.mp3' %}" id="birdsound208" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/hoshigarasu_200824_norikura_kuroda.mp3' %}" id="birdsound210" class="bird bird8" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/hototogisu_110609_okayama_kaji.mp3' %}" id="birdsound212" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/hukurou_100420_watarase.mp3' %}" id="birdsound214" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/iijimac_160515_miyake_kuroda.mp3' %}" id="birdsound215" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/ikaruchidori_100427_utsunomiya.mp3' %}" id="birdsound218" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/ikaruchidori_130618_nasushiobara_hirano.mp3' %}" id="birdsound219" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/ikaru_0805_hyogo_kaji.mp3' %}" id="birdsound221" class="bird bird8" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/ikaru_0904_hyogo_kaji.mp3' %}" id="birdsound222" class="bird bird9" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/ishigakishiju_120423_ishigaki_moriya.mp3' %}" id="birdsound228" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/isoshigi2_110424_utsunomiya_hirano.mp3' %}" id="birdsound233" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/isuka_140528_osado_mju.mp3' %}" id="birdsound240" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/iwahibari-fly_170614_fuji_takagi.mp3' %}" id="birdsound241" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/iwahibari_170614_fuji_takagi.mp3' %}" id="birdsound242" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/jobitaki_071107_watarase_hirano.mp3' %}" id="birdsound245" class="bird bird11" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/jobitaki_121027_hyogo_kuroda.mp3' %}" id="birdsound246" class="bird bird10" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/jobitaki_130820_syobyou_murahama.mp3' %}" id="birdsound247" class="bird bird8" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/jobitaki_140523_hyogo_kuroda.mp3' %}" id="birdsound248" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/jobitaki_141021_hyogo_kuroda.mp3' %}" id="birdsound249" class="bird bird10" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/jobitaki_160808_hyogo_kuroda.mp3' %}" id="birdsound251" class="bird bird8" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/juuichi_0805_hyogo_kaji.mp3' %}" id="birdsound253" class="bird bird8" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/jyoubitaki_121112_utsunomiya_hirano.mp3' %}" id="birdsound254" class="bird bird11" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kaistuburi_0906_hyogo_kaji.mp3' %}" id="birdsound255" class="bird bird9" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kaitsuburi_070619_watarase.mp3' %}" id="birdsound257" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kaitsuburi_140619_mihara_ito.mp3' %}" id="birdsound259" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kakesu_080413_utsunomiya_hirano.mp3' %}" id="birdsound262" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kakesu_110429_utsunomiya_hirano.mp3' %}" id="birdsound267" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kakesu_120210_nemuro_mju.mp3' %}" id="birdsound268" class="bird bird2" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kakesu_160624_chichibu_cyberforest.mp3' %}" id="birdsound270" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kakko060602_kokubunji_mju.mp3' %}" id="birdsound271" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kakko_070716_chikuma_kasahara.mp3' %}" id="birdsound272" class="bird bird7" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kakko_120629_utsunomiya_hirano.mp3' %}" id="birdsound273" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kakou_100610_nikko.mp3' %}" id="birdsound274" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kamoshika_140510_nikko_abe.mp3' %}" id="birdsound275" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kanmurikaitsburi_130412_aomori_kuroda.mp3' %}" id="birdsound276" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kanmurikaitsuburi_130615_aomori_kuroda.mp3' %}" id="birdsound277" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kanmurikaitsu_120417ogawara_mikami.mp3' %}" id="birdsound278" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kanmuriumisuzu_190406_tokushima_kuroda3.mp3' %}" id="birdsound281" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kanmuriwashi_120423_ishigaki_moriya.mp3' %}" id="birdsound283" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kaogurogabi_130429_akikawa_miya.mp3' %}" id="birdsound284" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kaogurogabi_180626_kokubunji_mju.mp3' %}" id="birdsound285" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kaojirogabityou_120406_watarase_hirano.mp3' %}" id="birdsound289" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/karasubato_121108_kitakyu_mju.mp3' %}" id="birdsound293" class="bird bird11" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/karugamo_0910_hyogo_kaji.mp3' %}" id="birdsound295" class="bird bird9" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kasasagi_130603_muroran_kros.mp3' %}" id="birdsound296" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kashiradaka_100410_utsunomiya.mp3' %}" id="birdsound297" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kashiradaka_101209_watarase_hirano.mp3' %}" id="birdsound298" class="bird bird12" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kawagarasu_131015_nikko_hirano.mp3' %}" id="birdsound300" class="bird bird10" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kawagarasu_hyogo_151106_kaji.mp3' %}" id="birdsound301" class="bird bird11" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kawarahiwa_110122_ikeshima_mju.mp3' %}" id="birdsound305" class="bird bird1" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kawarahiwa_120817_muroran_kuros.mp3' %}" id="birdsound306" class="bird bird8" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kawarahiwa_130326_utsunomiya_hirano.mp3' %}" id="birdsound307" class="bird bird3" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kawarahiwa_130623_date_kros.mp3' %}" id="birdsound308" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kawasemi_100223_watarase.mp3' %}" id="birdsound309" class="bird bird2" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kawasemi_160529_oyama_hirano.mp3' %}" id="birdsound310" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kawau_091204_sano_hirano.mp3' %}" id="birdsound311" class="bird bird12" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/keri_120508b_himeji_kuroda.mp3' %}" id="birdsound318" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/keri_120508c_himeji_kuroda.mp3' %}" id="birdsound319" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/keri_120508_himeji_kuroda.mp3' %}" id="birdsound320" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kiashishigi_120503_tatsuno_kuroda.mp3' %}" id="birdsound321" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kiashishigi_140515_tatsuno_kuroda.mp3' %}" id="birdsound323" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kibashiri_060605_yaitahirano.mp3' %}" id="birdsound325" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kibashiri_100529_nasushiobara.mp3' %}" id="birdsound326" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kibashiri_111021_asahikawa_mju.mp3' %}" id="birdsound328" class="bird bird10" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kibitaki2_0904_hyogo_kaji.mp3' %}" id="birdsound330" class="bird bird9" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kibitaki_090620_kosado_mju.mp3' %}" id="birdsound331" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kibitaki_130531_sasayama_kaji.mp3' %}" id="birdsound333" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kibitaki_150610_sado_mju.mp3' %}" id="birdsound334" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kijibato_040504_kokubunji_mju.mp3' %}" id="birdsound335" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kijibato_120506_kokubunji_mju.mp3' %}" id="birdsound336" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kiji_080413_utsunomiya_hirano.mp3' %}" id="birdsound337" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kiji_1008_aichi_kuroda.mp3' %}" id="birdsound338" class="bird bird10" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kikuitadaki_121109_kitakyu_mju.mp3' %}" id="birdsound343" class="bird bird11" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kinbato_130424_miyako_mtakagi.mp3' %}" id="birdsound348" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kirenjaku_150302_setana_mju.mp3' %}" id="birdsound349" class="bird bird3" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kisekirei_060526_tanzawa_mju.mp3' %}" id="birdsound350" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kisekirei_101209_watarase_hirano.mp3' %}" id="birdsound351" class="bird bird12" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/koaoashi_130428_saga_moriya.mp3' %}" id="birdsound358" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/koao_141024_tatsuno_kuroda.mp3' %}" id="birdsound359" class="bird bird10" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kobuhakuchou_071129_kagoshima_kaji.mp3' %}" id="birdsound360" class="bird bird11" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kochidori2_10323_watarase.mp3' %}" id="birdsound361" class="bird bird3" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kochidori_140514_tasuno_kuroda.mp3' %}" id="birdsound363" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kochidori_150412_toyooka_kuroda.mp3' %}" id="birdsound364" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kogamo_0910_hyogo_kaji.mp3' %}" id="birdsound365" class="bird bird9" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kogara_060605_yaita_hirano.mp3' %}" id="birdsound368" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kogara_121128_shinoyama_kaji.mp3' %}" id="birdsound370" class="bird bird11" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kogara_nasushiobara_150331_hirano.mp3' %}" id="birdsound374" class="bird bird3" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kogera_060706_mooka_mju.mp3' %}" id="birdsound375" class="bird bird7" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kogera_080516_utsunomiya_hirano.mp3' %}" id="birdsound376" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kogera_130428_utsunomiya_hirano.mp3' %}" id="birdsound378" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kogera_150402_kunitachi_mju.mp3' %}" id="birdsound379" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kogera_160701_miyake_kuroda.mp3' %}" id="birdsound380" class="bird bird7" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kohakucho_130407_aomori_kuroda.mp3' %}" id="birdsound381" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kohakucho_151129_kaga_mju.mp3' %}" id="birdsound382" class="bird bird11" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kojukei1_060512_hino_mju.mp3' %}" id="birdsound384" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kojukei2_060512_hino_mju.mp3' %}" id="birdsound385" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kojyukei_120704_sano_hirano.mp3' %}" id="birdsound388" class="bird bird7" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kojyurin_100202_utsunomiya_hirano.mp3' %}" id="birdsound389" class="bird bird2" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kokugan_151206_koyaike_hasegawa.mp3' %}" id="birdsound391" class="bird bird12" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kokugan_160312_hakodate_mikami.mp3' %}" id="birdsound392" class="bird bird3" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kokumaru_130410_aomori_kuroda.mp3' %}" id="birdsound393" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/komadori_060605_yaita_hirano.mp3' %}" id="birdsound394" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/komadori_0804_hyogo_kaji.mp3' %}" id="birdsound395" class="bird bird8" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/komimizuku_161203_akita_hara.mp3' %}" id="birdsound396" class="bird bird12" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/komori_091212_ehime_kuroda.mp3' %}" id="birdsound397" class="bird bird12" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/konoha_120602_nikko_abe.mp3' %}" id="birdsound404" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/konotori_150629_toyooka_kuroda.mp3' %}" id="birdsound406" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/korigamo_110205_wakkanai_mju.mp3' %}" id="birdsound407" class="bird bird2" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/korigamo_150222_nemuro_mju.mp3' %}" id="birdsound408" class="bird bird2" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kosagi_121115_hyogo_kuroda.mp3' %}" id="birdsound414" class="bird bird11" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kosagi_121125_himeji_kuroda.mp3' %}" id="birdsound415" class="bird bird11" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kosamebitaki_100529_nasushiobara.mp3' %}" id="birdsound416" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kosamebitaki_100606_nasusiobara.mp3' %}" id="birdsound417" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kosame_130514_nasushio_hirano.mp3' %}" id="birdsound421" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kouraiuguisu2_180519_tokyo.mp3' %}" id="birdsound426" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kouraiuguisu_180519_tokyo.mp3' %}" id="birdsound427" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kuina_060801_watarase_hirano.mp3' %}" id="birdsound430" class="bird bird8" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kuina_071127_watarase_hirano.mp3' %}" id="birdsound431" class="bird bird11" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kukuitadaki_081028_nasushio_hirano.mp3' %}" id="birdsound434" class="bird bird10" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kumagera_060621_hokkaidou_kaji.mp3' %}" id="birdsound435" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kumataka_081210_tottori_kuroda.mp3' %}" id="birdsound440" class="bird bird12" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kumataka_130506_nikko_abe.mp3' %}" id="birdsound441" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kurogamo_110308_notsuke_moriya.mp3' %}" id="birdsound443" class="bird bird3" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kurogamo_150222_nemuro_mju.mp3' %}" id="birdsound444" class="bird bird2" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kurojii_090620_osado_mju.mp3' %}" id="birdsound445" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kuroji_c_080430_utsunomiya_hirano.mp3' %}" id="birdsound448" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kurosagi_150703_fukuoka_kuroda.mp3' %}" id="birdsound449" class="bird bird7" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kurotsugumi_nasushiobara_160624_hirano.mp3' %}" id="birdsound453" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kurotsura_191124_fukuoka_kuroda.mp3' %}" id="birdsound454" class="bird bird11" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/kusashigi_071107_watarase_hirano.mp3' %}" id="birdsound456" class="bird bird11" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/magamo_1001_hyogo_kaji.mp3' %}" id="birdsound459" class="bird bird10" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/magamo_140112_hyogo_kuroda.mp3' %}" id="birdsound460" class="bird bird1" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/magan2_111008_miyajimanuma_namba.mp3' %}" id="birdsound461" class="bird bird10" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/magan_111008_miyajimanuma_namba.mp3' %}" id="birdsound462" class="bird bird10" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/magan_161213_izunuma_mju.mp3' %}" id="birdsound463" class="bird bird12" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/mahiwa_200407_chichibu_cf.mp3' %}" id="birdsound465" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/mamichajinai1_0604_hyogo_kaji.mp3' %}" id="birdsound469" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/mamichajinai_121013_utsunomiya_hirano.mp3' %}" id="birdsound471" class="bird bird10" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/mamijiro_070522_kanuma_hirano.mp3' %}" id="birdsound473" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/mamitahi_121109_kitakyu_moriya.mp3' %}" id="birdsound474" class="bird bird11" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/manazuru1_071129_izumi_kaji.mp3' %}" id="birdsound475" class="bird bird11" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/mebosomushikui_1005_hyogo_kaji.mp3' %}" id="birdsound477" class="bird bird10" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/meboso_110619_hachimantai_mikami.mp3' %}" id="birdsound480" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/medaichidori_120503_tatsuno_kuroda.mp3' %}" id="birdsound481" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/meguro_110417_hahajima_mju.mp3' %}" id="birdsound483" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/mejiroc_160516_miyake_kuroda.mp3' %}" id="birdsound484" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/mejiro_100112_utsunomiya_hirano.mp3' %}" id="birdsound488" class="bird bird1" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/mifuuzuraf_130519_kiyamu_oshiro.mp3' %}" id="birdsound493" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/mifuuzura_130519_kiyamu_oshiro.mp3' %}" id="birdsound494" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/misago_1008_aichi_kuroda.mp3' %}" id="birdsound496" class="bird bird10" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/misago_120412_hyogo_kuroda.mp3' %}" id="birdsound497" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/misosazai-c_091204_sano_hirano.mp3' %}" id="birdsound499" class="bird bird12" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/misosazai_060619_hokkaidou_kaji.mp3' %}" id="birdsound500" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/miyakodori_120320_sanbanse_moriya.mp3' %}" id="birdsound502" class="bird bird3" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/miyamagarasu_071130_izumi_kaji.mp3' %}" id="birdsound504" class="bird bird11" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/mosukemiso_160701_miyake_kuroda.mp3' %}" id="birdsound510" class="bird bird7" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/mozu_070625_chikuma_kasahara.mp3' %}" id="birdsound512" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/mozu_100610_nikkou.mp3' %}" id="birdsound516" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/mozu_140505_utsunomiya_hirano.mp3' %}" id="birdsound517" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/mujisekka_140423_biwako_murao.mp3' %}" id="birdsound522" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/mukudori_150528_kokubunji_mju.mp3' %}" id="birdsound525" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/munaguro111015_hyogo_kuroda.mp3' %}" id="birdsound526" class="bird bird10" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/munaguro_110419_hahajima_mju.mp3' %}" id="birdsound527" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/munaguro_130826_hyogo_kuroda.mp3' %}" id="birdsound528" class="bird bird8" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/nabezuru1_071201_izumi_kaji.mp3' %}" id="birdsound529" class="bird bird12" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/nobitaki1_070620_nagano_kaji.mp3' %}" id="birdsound533" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/nobitaki_120607_senjyougahara_hirano.mp3' %}" id="birdsound535" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/nogoma_091013_watarase_hirano.mp3' %}" id="birdsound537" class="bird bird10" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/noguchigera_120419_yambaru_moriya.mp3' %}" id="birdsound539" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/nojiko_090512_nasu_hirano.mp3' %}" id="birdsound540" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/nosuri_091204_sano_hirano.mp3' %}" id="birdsound543" class="bird bird12" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/nosuri_121227_tatsuno_kuroda.mp3' %}" id="birdsound544" class="bird bird12" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/nosuri_130402_aomori_kuroda.mp3' %}" id="birdsound545" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/nosuri_130517_muroran_kros.mp3' %}" id="birdsound547" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/nyunai_080614_nikko_hirano.mp3' %}" id="birdsound548" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/oakageraj_140619_kosado_mju.mp3' %}" id="birdsound551" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/oakagera_070525_nasushio_hirano.mp3' %}" id="birdsound552" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/oakagera_140619_kosado_mju.mp3' %}" id="birdsound553" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/oban_151129_awara_mju.mp3' %}" id="birdsound556" class="bird bird11" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/ohakucho_100227_otawara_hirano.mp3' %}" id="birdsound560" class="bird bird2" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/ojirowashi_130215_nemuro_mju.mp3' %}" id="birdsound565" class="bird bird2" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/ojurin_080701_doto_kuroda.mp3' %}" id="birdsound566" class="bird bird7" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/ojurin_091116_watarase_hirano.mp3' %}" id="birdsound567" class="bird bird11" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/okonoha_110509_nikko_abe.mp3' %}" id="birdsound569" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/okonoha_110518_nikko_abe.mp3' %}" id="birdsound570" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/okonoha_130505_nikko_abe.mp3' %}" id="birdsound571" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/okonoha_140413_nikko_abe.mp3' %}" id="birdsound572" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/omashiko_121203_tottori_kuroda.mp3' %}" id="birdsound573" class="bird bird12" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/omushikui_150529_fukuoka_kuroda.mp3' %}" id="birdsound575" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/onagagamo2_0801_hyogo_kaji.mp3' %}" id="birdsound577" class="bird bird8" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/onikakko_150527_amami_miyayama.mp3' %}" id="birdsound580" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/ooakagera_100512_shiiba_mju.mp3' %}" id="birdsound581" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/ooakagera_200405_daisen_kuroda.mp3' %}" id="birdsound582" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/ooban_111227_watarase_hirano.mp3' %}" id="birdsound583" class="bird bird12" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/oojishigi2_070620_nagano_kaji.mp3' %}" id="birdsound585" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/oosekka_070424_watarase_hirano.mp3' %}" id="birdsound592" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/oosekka_081216_watarase_hirano.mp3' %}" id="birdsound593" class="bird bird12" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/ootaka_131223_tatsuno_kuroda.mp3' %}" id="birdsound595" class="bird bird12" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/osekka_091215_watarase_hirano.mp3' %}" id="birdsound601" class="bird bird12" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/osekka_120703_watarase_hirano.mp3' %}" id="birdsound602" class="bird bird7" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/ostoaka2_140307_amami_ishida.mp3' %}" id="birdsound607" class="bird bird3" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/ostoaka_140307d_amami_ishida.mp3' %}" id="birdsound608" class="bird bird3" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/ostoaka_140307_amami_ishida.mp3' %}" id="birdsound609" class="bird bird3" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/ostooaka090518_amami_isida.mp3' %}" id="birdsound610" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/otaka_060606_fujioka_hirano.mp3' %}" id="birdsound611" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/oyoshikiri_140727_chikuma_kasahara.mp3' %}" id="birdsound615" class="bird bird7" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/rkonohazuku_120423_ishigaki_moriya.mp3' %}" id="birdsound619" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/rsanshokui_120419_yambaru_moriya.mp3' %}" id="birdsound620" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/rtsubame_120419_yona_moriya.mp3' %}" id="birdsound622" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/ruribitaki_0811_hyogo_kaji.mp3' %}" id="birdsound624" class="bird bird8" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/ruribitaki_0903_hyogo_kaji.mp3' %}" id="birdsound626" class="bird bird9" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/ruribitaki_120521_hayachine_mikami.mp3' %}" id="birdsound628" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/rurikakesu_0903_amami_ishida.mp3' %}" id="birdsound631" class="bird bird9" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/rurikakesu_j_amami_ishida.mp3' %}" id="birdsound633" class="bird bird9" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/sadoforest.mp3' %}" id="birdsound3" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/sadokakesu_100223_sado_mju.mp3' %}" id="birdsound637" class="bird bird2" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/sankouchou_0806_hyogo_kaji.mp3' %}" id="birdsound642" class="bird bird8" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/sanko_9806_takara_anezaki.mp3' %}" id="birdsound644" class="bird bird8" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/saruhama_160910_himeji_kuroda.mp3' %}" id="birdsound646" class="bird bird9" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/sasagoi_100503_utsunomiya.mp3' %}" id="birdsound648" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/sasagoi_120623_2_utsunomiya_hirano.mp3' %}" id="birdsound650" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/sasagoi_120623_utsunomiya_hirano.mp3' %}" id="birdsound651" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/sashiba060722_ichikai_mju.mp3' %}" id="birdsound652" class="bird bird7" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/segurokakko_130530_shimane_wada.mp3' %}" id="birdsound654" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/segurokakko_150523_tsushima_mju.mp3' %}" id="birdsound655" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/segurokamome_110208_sado_mju.mp3' %}" id="birdsound657" class="bird bird2" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/segurosekirei_100316_utsunomiya.mp3' %}" id="birdsound658" class="bird bird3" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/seguroseki_090312_nasu_hirano.mp3' %}" id="birdsound660" class="bird bird3" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/sekka_111017_hyogo_kuroda.mp3' %}" id="birdsound666" class="bird bird10" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/sekka_20101125_watarase_hirano.mp3' %}" id="birdsound667" class="bird bird11" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/sendaimushikui_1005_hyogo_kaji.mp3' %}" id="birdsound669" class="bird bird10" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/sendai_040503_kokubunji_mju.mp3' %}" id="birdsound670" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/sendai_180625_uryu_kuros.mp3' %}" id="birdsound672" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/shijukara_120530_osado_mju.mp3' %}" id="birdsound677" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/shika_090528_chichibu_mju.mp3' %}" id="birdsound681" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/shimakuina_160205_watarase_hirano.mp3' %}" id="birdsound689" class="bird bird2" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/shime_150428_utsunomiya_hirano.mp3' %}" id="birdsound692" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/shime_200211_kosado_mju.mp3' %}" id="birdsound693" class="bird bird2" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/shinorigamo_tomamae_130201_mju.mp3' %}" id="birdsound694" class="bird bird2" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/shirakobato_120913_kasukabe_moriya.mp3' %}" id="birdsound696" class="bird bird9" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/shirochidori_utsunomiya_100518.mp3' %}" id="birdsound697" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/shiroeriohamu_110515_tomakomai_namba.mp3' %}" id="birdsound698" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/shiroharakuina_120424_ishigaki_moriya.mp3' %}" id="birdsound705" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/shirohara_090412_utsunomiya_hirano.mp3' %}" id="birdsound706" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/sijukara_060422_kokubunji_mju.mp3' %}" id="birdsound710" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/sijuukara7_0902_hyogo_kaji.mp3' %}" id="birdsound718" class="bird bird9" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/sijyukara_110703_utsunomiya_hirano.mp3' %}" id="birdsound721" class="bird bird7" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/sirohara_1102_hyogo_kaji.mp3' %}" id="birdsound722" class="bird bird11" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/sorihashi_130825_hyogo_kuroda.mp3' %}" id="birdsound723" class="bird bird8" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/soshicho_c_070331_kokubunji_mju.mp3' %}" id="birdsound724" class="bird bird3" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/soushicho_0906_hyogo_kaji.mp3' %}" id="birdsound726" class="bird bird9" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/suzume_040504_kokubunji_mju.mp3' %}" id="birdsound727" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/suzume_120210_nemuro_mju.mp3' %}" id="birdsound729" class="bird bird2" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/tageri_121115_hyogo_kuroda.mp3' %}" id="birdsound731" class="bird bird11" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/tageri_121116_hyogo_kuroda.mp3' %}" id="birdsound732" class="bird bird11" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/tagogaeru_060603_okutadami_mju.mp3' %}" id="birdsound734" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/tahibari_0802_hyogo_kaji.mp3' %}" id="birdsound735" class="bird bird8" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/tahibari_111015_nemuro_mju.mp3' %}" id="birdsound736" class="bird bird10" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/tahibari_151204_toyooka_kuroda.mp3' %}" id="birdsound737" class="bird bird12" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/takabu2_140902_tatsuno_kuroda.mp3' %}" id="birdsound738" class="bird bird9" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/takabu_130428_saga_moriya.mp3' %}" id="birdsound739" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/takabu_140902_tatsuno_kuroda.mp3' %}" id="birdsound740" class="bird bird9" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/tashigi_111004_hyogo_kuroda.mp3' %}" id="birdsound745" class="bird bird10" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/tashigi_121027_hyogo_kuroda.mp3' %}" id="birdsound746" class="bird bird10" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/toki3_150202_sado_mju.mp3' %}" id="birdsound748" class="bird bird2" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/toki_150202_sado_mju.mp3' %}" id="birdsound751" class="bird bird2" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/tonen_120921_hyogo_kuroda.mp3' %}" id="birdsound752" class="bird bird9" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/tonen_130830hyogo_kuroda.mp3' %}" id="birdsound753" class="bird bird8" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/torafu_080602_tochigi_hirano.mp3' %}" id="birdsound754" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/toratsugumi_141231_utsunomiya_hirano.mp3' %}" id="birdsound757" class="bird bird12" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/tsubamechi_121009_hyogo_kuroda.mp3' %}" id="birdsound758" class="bird bird10" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/tsubame_110705_fuchu_mju.mp3' %}" id="birdsound761" class="bird bird7" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/tsugumi_091110_nikko_hirano.mp3' %}" id="birdsound762" class="bird bird11" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/tsugumi_110429_utsunomiya_hirano.mp3' %}" id="birdsound763" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/tsumenagahojiro_111217_mukawa_namba.mp3' %}" id="birdsound764" class="bird bird12" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/tsumi_080412_utsunomiya_hirano.mp3' %}" id="birdsound766" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/tsumi_090317_utsunomiya_hirano.mp3' %}" id="birdsound767" class="bird bird3" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/tsumi_120405_utsunomiya_hirano.mp3' %}" id="birdsound770" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/tsurushigi_110929_hyogo_kuroda.mp3' %}" id="birdsound771" class="bird bird9" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/tsurushigi_121014_hyogo_kuroda.mp3' %}" id="birdsound772" class="bird bird10" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/tsutsudori_080523_nasushio_hirano.mp3' %}" id="birdsound774" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/tumiyoutyou_100716_utsunomiya.mp3' %}" id="birdsound775" class="bird bird7" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/tyuhi_100406_watarase.mp3' %}" id="birdsound776" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/uchiyama_090612_koshima_kuroda.mp3' %}" id="birdsound777" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/uchiyama_090627_kashima_kuroda.mp3' %}" id="birdsound778" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/uchiyama_150703_fukuoka_kuroda.mp3' %}" id="birdsound779" class="bird bird7" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/uchiyama_c1_090627_kashima_kuroda.mp3' %}" id="birdsound780" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/uchiyama_c2_090627_kashima_kuroda.mp3' %}" id="birdsound781" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/umiaisa_130104_tatsuno_kuroda.mp3' %}" id="birdsound789" class="bird bird1" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/umiu_130619_muroran_kros.mp3' %}" id="birdsound791" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/uso_130403_muroran_kros.mp3' %}" id="birdsound794" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/uso_130504_muroran_kros.mp3' %}" id="birdsound795" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/uso_20110111_sado_mju.mp3' %}" id="birdsound796" class="bird bird1" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/uzura_090427_watarase_hirano.mp3' %}" id="birdsound797" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/washikamome_140122_nemuro_mju.mp3' %}" id="birdsound799" class="bird bird1" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/watarigarasu_140213_nemuro_mju.mp3' %}" id="birdsound800" class="bird bird2" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/watari_1602220_nemuro_mju.mp3' %}" id="birdsound801" class="bird bird2" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/yabusame_0804_hyogo_kaji.mp3' %}" id="birdsound805" class="bird bird8" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/yabusame_080618_nara_kuroda.mp3' %}" id="birdsound806" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/yabusame_0905_hyogo_kaji.mp3' %}" id="birdsound807" class="bird bird9" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/yabusame_0906_hyogo_kaji.mp3' %}" id="birdsound808" class="bird bird9" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/yabusame_120628_sapporo_kawaji.mp3' %}" id="birdsound810" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/yamaakagaeru_200702_hyogo_kuroda.mp3' %}" id="birdsound813" class="bird bird7" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/yamadori_120607_oita_ikenaga.mp3' %}" id="birdsound814" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/yamadori_130608_takarazuka_kaji.mp3' %}" id="birdsound815" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/yamadori_kosado_140529_mju.mp3' %}" id="birdsound817" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/yamador_150530_sado_mju.mp3' %}" id="birdsound818" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/yamagaraj_150602_chichibu_mju.mp3' %}" id="birdsound819" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/yamagara_0903_hyogo_kaji.mp3' %}" id="birdsound822" class="bird bird9" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/yamagara_150203_sado_mju.mp3' %}" id="birdsound827" class="bird bird2" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/yamagera_130330_muroran_kuros.mp3' %}" id="birdsound831" class="bird bird3" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/yamagera_130422_muroran_kros.mp3' %}" id="birdsound832" class="bird bird4" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/yamagera_141025_nopporo_mju.mp3' %}" id="birdsound833" class="bird bird10" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/yamasemi_050609_chikuma_kasa.mp3' %}" id="birdsound834" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/yamasemi_140506_hyogo_kuroda.mp3' %}" id="birdsound835" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/yamasemi_180307_gifu_kuroda.mp3' %}" id="birdsound836" class="bird bird3" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/yamashigi_080704_doto_kuroda.mp3' %}" id="birdsound837" class="bird bird7" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/yoshigoi_100601_watarase.mp3' %}" id="birdsound842" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/yotaka_070521_nikko_mju.mp3' %}" id="birdsound844" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/yotaka_110604_nikko_abe.mp3' %}" id="birdsound845" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/yotaka_140528_osado_mju.mp3' %}" id="birdsound847" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/yotaka_150624_wakayama_kuroda.mp3' %}" id="birdsound848" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/yotaka_150629_nikko_abe.mp3' %}" id="birdsound849" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/yotaka_teion_130618_nasushiobara_hirano.mp3' %}" id="birdsound850" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/yurikamome2_0801_hyogo_kaji.mp3' %}" id="birdsound852" class="bird bird8" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/zuaka_080512_taketomi_mtakagi.mp3' %}" id="birdsound853" class="bird bird5" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/zuaka_9806_takara_anezaki.mp3' %}" id="birdsound854" class="bird bird6" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/zugurokamome_121122_hyogo_kuroda.mp3' %}" id="birdsound855" class="bird bird11" preload="none"></audio>
+<audio src="{% static 'smartclock/birdsounds/zugurokamome_121123_hyogo_kuroda.mp3' %}" id="birdsound856" class="bird bird11" preload="none"></audio>
+
+
+<!-- classic sound -->
+<audio src="{% static 'smartclock/classics/1731 Bach , Oboe Concerto in D minor, 2nd movement.mp3' %}" id="classical1" class="classical_music" preload="none"></audio>
+<audio src="{% static 'smartclock/classics/1783 Horn Concerto No. 3 in E flat, 2nd movement.mp3' %}" id="classical2" class="classical_music" preload="none"></audio>
+<audio src="{% static 'smartclock/classics/1791 Mozart- Clarinet Concerto in A, 2nd movement.mp3' %}" id="classical3" class="classical_music" preload="none"></audio>
+<audio src="{% static 'smartclock/classics/1796 Beethoven- Minuet in G.mp3' %}" id="classical4" class="classical_music" preload="none"></audio>
+<audio src="{% static 'smartclock/classics/1796 Haydn- Trumpet Concerto in E flat, 3rd movement.mp3' %}" id="classical5" class="classical_music" preload="none"></audio>
+<audio src="{% static 'smartclock/classics/1797 Haydn- Emporors Hymn, from String Quartet in C.mp3' %}" id="classical6" class="classical_music" preload="none"></audio>
+<audio src="{% static 'smartclock/classics/1810 Beethoven- Fur Elise.mp3' %}" id="classical7" class="classical_music" preload="none"></audio>
+<audio src="{% static 'smartclock/classics/1822 Schubert - Symphony No.8 in B minor, Unfinished.mp3' %}" id="classical8" class="classical_music" preload="none"></audio>
+<audio src="{% static 'smartclock/classics/1833 Mendelssohn - Symphony No.4 in A, Italian, 1st movement.mp3' %}" id="classical9" class="classical_music" preload="none"></audio>
+<audio src="{% static 'smartclock/classics/1838 Schumann - Traumerei.mp3' %}" id="classical10" class="classical_music" preload="none"></audio>
+<audio src="{% static 'smartclock/classics/1841 Mendelssohn -Spring Song.mp3' %}" id="classical11" class="classical_music" preload="none"></audio>
+<audio src="{% static 'smartclock/classics/1845 Mendelssohn - Violin Concerto in E minor, 2nd movement.mp3' %}" id="classical12" class="classical_music" preload="none"></audio>
+<audio src="{% static 'smartclock/classics/1847 Liszt - Liebestraum No.3 in A flat.mp3' %}" id="classical13" class="classical_music" preload="none"></audio>
+<audio src="{% static 'smartclock/classics/1858 Rubinstein- Melody in F.mp3' %}" id="classical14" class="classical_music" preload="none"></audio>
+<audio src="{% static 'smartclock/classics/1864 Grieg- I Love You.mp3' %}" id="classical15" class="classical_music" preload="none"></audio>
+<audio src="{% static 'smartclock/classics/1865 Brahms- Waltz.mp3' %}" id="classical16" class="classical_music" preload="none"></audio>
+<audio src="{% static 'smartclock/classics/1867 J. Strauss II- The Blue Danube - Waltz.mp3' %}" id="classical17" class="classical_music" preload="none"></audio>
+<audio src="{% static 'smartclock/classics/1875 Smetana- The Moldau.mp3' %}" id="classical18" class="classical_music" preload="none"></audio>
+<audio src="{% static 'smartclock/classics/1892 Tchaikovsky- Waltz of the FLowers, from The Nutcracker.mp3' %}" id="classical19" class="classical_music" preload="none"></audio>
+<audio src="{% static 'smartclock/classics/1893 Dvorak- Symphony No. 9, From the New World, 2nd Movement.mp3' %}" id="classical20" class="classical_music" preload="none"></audio>
+<audio src="{% static 'smartclock/classics/1894 Dvorak - Humoresque.mp3' %}" id="classical21" class="classical_music" preload="none"></audio>
+<audio src="{% static 'smartclock/classics/1894 Massenet - Meditation, from Thais.mp3' %}" id="classical22" class="classical_music" preload="none"></audio>
+<audio src="{% static 'smartclock/classics/1902 Mahler - Symphony No. 5 - Adagietto.mp3' %}" id="classical23" class="classical_music" preload="none"></audio>
+<audio src="{% static 'smartclock/classics/Advent_Chamber_Orchestra_-_04_-_Handel_-_Entrance_to_the_Queen_of_Sheba_for_Two_Oboes_Strings_and_Continuo_allegro.mp3' %}" id="classical24" class="classical_music" preload="none"></audio>
+<audio src="{% static 'smartclock/classics/Alla-Turca.mp3' %}" id="classical25" class="classical_music" preload="none"></audio>
+<audio src="{% static 'smartclock/classics/Bach-Orchestral-Suite-no.-3-in-D-major-BWV-1068-Download-free-sheet-music.mp3' %}" id="classical26" class="classical_music" preload="none"></audio>
+<audio src="{% static 'smartclock/classics/bach_bwv1007_cp_01_suite_n1.mp3' %}" id="classical27" class="classical_music" preload="none"></audio>
+<audio src="{% static 'smartclock/classics/hallelujah-chorus-9MB.mp3' %}" id="classical28" class="classical_music" preload="none"></audio>
+<audio src="{% static 'smartclock/classics/Hndel-Xerxes-HWV-40.mp3' %}" id="classical29" class="classical_music" preload="none"></audio>
+<audio src="{% static 'smartclock/classics/Orchestral-Suite-no.-2-in-B-minor-BWV-1067-7.-Badinerie.mp3' %}" id="classical30" class="classical_music" preload="none"></audio>
+<audio src="{% static 'smartclock/classics/Piano-Concerto-no.-21-in-C-major-K.-467-II.-Andante.mp3' %}" id="classical31" class="classical_music" preload="none"></audio>
+
+<!-- nature sound -->
+<audio src="{% static 'smartclock/nature/fire_spa_fire_burning_firepit.mp3' %}" id="nature1" class="nature snowy" preload="none"></audio>
+<audio src="{% static 'smartclock/nature/fire_zapsplat_nature_fire_camp_fire_burn_sizzle_in_wind_11824.mp3' %}" id="nature2" class="nature snowy" preload="none"></audio>
+<audio src="{% static 'smartclock/nature/lake-waves-01.mp3' %}" id="nature3" class="nature sunny" preload="none"></audio>
+<audio src="{% static 'smartclock/nature/lake-waves-lapping-gently-on-the-beach-01.mp3' %}" id="nature4" class="nature sunny" preload="none"></audio>
+<audio src="{% static 'smartclock/nature/lake_rowing-boat-rowboat-02.mp3' %}" id="nature5" class="nature sunny" preload="none"></audio>
+<audio src="{% static 'smartclock/nature/lake_spa_lakes_and_oceans_water_lake_medium_waves_close_perspective_01.mp3' %}" id="nature6" class="nature sunny" preload="none"></audio>
+<audio src="{% static 'smartclock/nature/lake_transportation_boat_rowing_boat_row_oars_lake.mp3' %}" id="nature7" class="nature sunny" preload="none"></audio>
+<audio src="{% static 'smartclock/nature/ocean-wave-1.mp3' %}" id="nature8" class="nature sunny" preload="none"></audio>
+<audio src="{% static 'smartclock/nature/ocean-wave-2.mp3' %}" id="nature9" class="nature sunny" preload="none"></audio>
+<audio src="{% static 'smartclock/nature/rain-01.mp3' %}" id="nature10" class="nature rainy" preload="none"></audio>
+<audio src="{% static 'smartclock/nature/rain-02.mp3' %}" id="nature11" class="nature rainy" preload="none"></audio>
+<audio src="{% static 'smartclock/nature/rain-03.mp3' %}" id="nature12" class="nature rainy" preload="none"></audio>
+<audio src="{% static 'smartclock/nature/rain-04.mp3' %}" id="nature13" class="nature rainy" preload="none"></audio>
+<audio src="{% static 'smartclock/nature/rain-05.mp3' %}" id="nature14" class="nature rainy" preload="none"></audio>
+<audio src="{% static 'smartclock/nature/rain-07.mp3' %}" id="nature15" class="nature rainy" preload="none"></audio>
+<audio src="{% static 'smartclock/nature/river-1.mp3' %}" id="nature16" class="nature sunny" preload="none"></audio>
+<audio src="{% static 'smartclock/nature/river-2.mp3' %}" id="nature17" class="nature sunny" preload="none"></audio>
+<audio src="{% static 'smartclock/nature/river-3.mp3' %}" id="nature18" class="nature sunny" preload="none"></audio>
+<audio src="{% static 'smartclock/nature/river-4.mp3' %}" id="nature19" class="nature sunny" preload="none"></audio>
+<audio src="{% static 'smartclock/nature/river-5.mp3' %}" id="nature20" class="nature sunny" preload="none"></audio>
+<audio src="{% static 'smartclock/nature/river-6.mp3' %}" id="nature21" class="nature sunny" preload="none"></audio>
+<audio src="{% static 'smartclock/nature/river_Small Stream Flowing.mp3' %}" id="nature22" class="nature sunny" preload="none"></audio>
+<audio src="{% static 'smartclock/nature/river_stream-1.mp3' %}" id="nature23" class="nature sunny" preload="none"></audio>
+<audio src="{% static 'smartclock/nature/river_stream-3.mp3' %}" id="nature24" class="nature sunny" preload="none"></audio>
+<audio src="{% static 'smartclock/nature/river_yfs_la_paz_valle_de_las_animas_little_creek_flowing_water2_091.mp3' %}" id="nature25" class="nature sunny" preload="none"></audio>
+<audio src="{% static 'smartclock/nature/river_zapsplat_nature_river_distant_forest_30519.mp3' %}" id="nature26" class="nature sunny" preload="none"></audio>
+<audio src="{% static 'smartclock/nature/river_zapsplat_nature_river_wide_water_flow_around_rocks_30525.mp3' %}" id="nature27" class="nature sunny" preload="none"></audio>
+<audio src="{% static 'smartclock/nature/river_zapsplat_nature_waterfall_water_run_trickle_down_rock_face_55330.mp3' %}" id="nature28" class="nature sunny" preload="none"></audio>
+<audio src="{% static 'smartclock/nature/river_zapsplat_public_places_spa_pool_spa_bath_bubbles_outside_birds_27053.mp3' %}" id="nature29" class="nature sunny" preload="none"></audio>
+<audio src="{% static 'smartclock/nature/snow_kevin_boucher_foley_footsteps_crunchy_snow.mp3' %}" id="nature30" class="nature snowy" preload="none"></audio>
+<audio src="{% static 'smartclock/nature/snow_spa_snowstorm_ambience_snow_falling_on_ground_with_wind.mp3' %}" id="nature31" class="nature snowy" preload="none"></audio>
+<audio src="{% static 'smartclock/nature/waterfall-1.mp3' %}" id="nature32" class="nature sunny" preload="none"></audio>
+<audio src="{% static 'smartclock/nature/waterfall_audio_hero_WaterFall_DIGIC07_27_396.mp3' %}" id="nature33" class="nature sunny" preload="none"></audio>
+<audio src="{% static 'smartclock/nature/wind-1.mp3' %}" id="nature34" class="nature cloudy" preload="none"></audio>
+<audio src="{% static 'smartclock/nature/wind-breeze-01.mp3' %}" id="nature35" class="nature cloudy" preload="none"></audio>
+<audio src="{% static 'smartclock/nature/wind-breeze-02.mp3' %}" id="nature36" class="nature cloudy" preload="none"></audio>
+<audio src="{% static 'smartclock/nature/wind-forest-ambience-01.mp3' %}" id="nature37" class="nature cloudy" preload="none"></audio>
+<audio src="{% static 'smartclock/nature/wind-gust-01.mp3' %}" id="nature38" class="nature cloudy" preload="none"></audio>
+<audio src="{% static 'smartclock/nature/wind-gust-02.mp3' %}" id="nature39" class="nature cloudy" preload="none"></audio>
+<audio src="{% static 'smartclock/nature/wind_zapsplat_nature_wind_in_palm_trees_17894.mp3' %}" id="nature40" class="nature cloudy" preload="none"></audio>
 
 
 

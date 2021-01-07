@@ -30,6 +30,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '127.0.0.1',
     '13.115.123.247'
+    '54.95.103.143'
 ]
 
 
@@ -128,3 +129,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/pics/'
 MEDIA_ROOT = BASE_DIR
+
+#LOGIN_URL = '/login' 
+#LOGIN_REDIRECT_URL = '/smartclock'
+#LOGOUT_REDIRECT_URL='/login'
